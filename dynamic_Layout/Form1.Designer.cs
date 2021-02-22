@@ -29,13 +29,33 @@ namespace dynamic_Layout
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.ucPanel1 = new dynamic_Layout.ucPanel();
+            this.SuspendLayout();
+            // 
+            // ucPanel1
+            // 
+            this.ucPanel1.BackColor = System.Drawing.Color.LightPink;
+            this.ucPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucPanel1.Location = new System.Drawing.Point(0, 0);
+            this.ucPanel1.Name = "ucPanel1";
+            this.ucPanel1.Size = new System.Drawing.Size(800, 450);
+            this.ucPanel1.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ucPanel1);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private ucPanel ucPanel1;
     }
 }
 

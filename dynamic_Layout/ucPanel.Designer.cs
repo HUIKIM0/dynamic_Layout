@@ -48,6 +48,7 @@ namespace dynamic_Layout
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblPanel);
             this.Name = "ucPanel";
+            this.SizeChanged += new System.EventHandler(this.PanelSizeChanged);
             this.ResumeLayout(false);
 
         }

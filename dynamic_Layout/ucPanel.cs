@@ -17,7 +17,7 @@ namespace dynamic_Layout
             InitializeComponent();
         }
 
-        // 판넬의 사이즈(유저 컨트롤)가 바뀔때 이벤트
+        // Panel의 사이즈(유저 컨트롤)가 바뀔때 이벤트
         private void PanelSizeChanged(object sender, EventArgs e)
         {
             lblPanel.Text = string.Format("({0},{1})",lblPanel.Width,lblPanel.Height);

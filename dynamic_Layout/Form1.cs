@@ -12,11 +12,12 @@ namespace dynamic_Layout
 {
     public partial class Form1 : Form
     {
+
+        // ucPanel2.BackColor = default(Color);  -> 색상 원래대로 돌려놓기
+
         public Form1()
         {
             InitializeComponent();
         }
-
-
     }
 }

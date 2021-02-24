@@ -30,13 +30,13 @@ namespace dynamic_Layout
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.ucPanel1 = new dynamic_Layout.ucPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.ucPanel1 = new dynamic_Layout.ucPanel();
-            this.ucPanel2 = new dynamic_Layout.ucPanel();
             this.ucPanel3 = new dynamic_Layout.ucPanel();
             this.ucPanel4 = new dynamic_Layout.ucPanel();
             this.ucPanel5 = new dynamic_Layout.ucPanel();
+            this.ucPanel2 = new dynamic_Layout.ucPanel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -59,15 +59,24 @@ namespace dynamic_Layout
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(608, 500);
-            this.splitContainer1.SplitterDistance = 172;
+            this.splitContainer1.Size = new System.Drawing.Size(692, 500);
+            this.splitContainer1.SplitterDistance = 195;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // ucPanel1
+            // 
+            this.ucPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucPanel1.Location = new System.Drawing.Point(0, 0);
+            this.ucPanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.ucPanel1.Name = "ucPanel1";
+            this.ucPanel1.Size = new System.Drawing.Size(195, 500);
+            this.ucPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 493F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.ucPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -77,7 +86,7 @@ namespace dynamic_Layout
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99813F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.00188F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(432, 500);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(493, 500);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -96,26 +105,8 @@ namespace dynamic_Layout
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(432, 376);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(493, 376);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // ucPanel1
-            // 
-            this.ucPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucPanel1.Location = new System.Drawing.Point(0, 0);
-            this.ucPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.ucPanel1.Name = "ucPanel1";
-            this.ucPanel1.Size = new System.Drawing.Size(172, 500);
-            this.ucPanel1.TabIndex = 0;
-            // 
-            // ucPanel2
-            // 
-            this.ucPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucPanel2.Location = new System.Drawing.Point(0, 0);
-            this.ucPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.ucPanel2.Name = "ucPanel2";
-            this.ucPanel2.Size = new System.Drawing.Size(432, 124);
-            this.ucPanel2.TabIndex = 1;
             // 
             // ucPanel3
             // 
@@ -124,7 +115,7 @@ namespace dynamic_Layout
             this.ucPanel3.Location = new System.Drawing.Point(0, 0);
             this.ucPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.ucPanel3.Name = "ucPanel3";
-            this.ucPanel3.Size = new System.Drawing.Size(216, 188);
+            this.ucPanel3.Size = new System.Drawing.Size(246, 188);
             this.ucPanel3.TabIndex = 0;
             // 
             // ucPanel4
@@ -134,24 +125,33 @@ namespace dynamic_Layout
             this.ucPanel4.Location = new System.Drawing.Point(0, 188);
             this.ucPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.ucPanel4.Name = "ucPanel4";
-            this.ucPanel4.Size = new System.Drawing.Size(216, 188);
+            this.ucPanel4.Size = new System.Drawing.Size(246, 188);
             this.ucPanel4.TabIndex = 1;
             // 
             // ucPanel5
             // 
             this.ucPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucPanel5.Location = new System.Drawing.Point(216, 0);
+            this.ucPanel5.Location = new System.Drawing.Point(246, 0);
             this.ucPanel5.Margin = new System.Windows.Forms.Padding(0);
             this.ucPanel5.Name = "ucPanel5";
             this.tableLayoutPanel2.SetRowSpan(this.ucPanel5, 2);
-            this.ucPanel5.Size = new System.Drawing.Size(216, 376);
+            this.ucPanel5.Size = new System.Drawing.Size(247, 376);
             this.ucPanel5.TabIndex = 2;
+            // 
+            // ucPanel2
+            // 
+            this.ucPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucPanel2.Location = new System.Drawing.Point(0, 0);
+            this.ucPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.ucPanel2.Name = "ucPanel2";
+            this.ucPanel2.Size = new System.Drawing.Size(493, 124);
+            this.ucPanel2.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 500);
+            this.ClientSize = new System.Drawing.Size(692, 500);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "Form1";

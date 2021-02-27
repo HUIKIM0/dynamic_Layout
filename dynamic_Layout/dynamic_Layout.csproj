@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucColorMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucColorMenu.Designer.cs">
+      <DependentUpon>ucColorMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -72,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucColorMenu.resx">
+      <DependentUpon>ucColorMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucPanel.resx">
       <DependentUpon>ucPanel.cs</DependentUpon>
     </EmbeddedResource>

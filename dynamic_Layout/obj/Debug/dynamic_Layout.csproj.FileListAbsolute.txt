@@ -9,3 +9,4 @@ D:\dev\C#Work\dynamic_Layout\dynamic_Layout\obj\Debug\dynamic_Layout.pdb
 D:\dev\C#Work\dynamic_Layout\dynamic_Layout\obj\Debug\dynamic_Layout.ucPanel.resources
 D:\dev\C#Work\dynamic_Layout\dynamic_Layout\obj\Debug\dynamic_Layout.csprojAssemblyReference.cache
 D:\dev\C#Work\dynamic_Layout\dynamic_Layout\obj\Debug\dynamic_Layout.Form1.resources
+D:\dev\C#Work\dynamic_Layout\dynamic_Layout\obj\Debug\dynamic_Layout.ucColorMenu.resources

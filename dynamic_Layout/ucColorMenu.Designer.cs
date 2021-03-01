@@ -31,6 +31,8 @@ namespace dynamic_Layout
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pColor = new System.Windows.Forms.Panel();
+            this.cDialogColor = new System.Windows.Forms.ColorDialog();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,6 +40,7 @@ namespace dynamic_Layout
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Controls.Add(this.pColor);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(128, 460);
@@ -55,6 +58,16 @@ namespace dynamic_Layout
             this.label1.Text = "색상선택";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pColor
+            // 
+            this.pColor.BackColor = System.Drawing.Color.White;
+            this.pColor.Location = new System.Drawing.Point(10, 45);
+            this.pColor.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.pColor.Name = "pColor";
+            this.pColor.Size = new System.Drawing.Size(100, 25);
+            this.pColor.TabIndex = 1;
+            this.pColor.Click += new System.EventHandler(this.pColor_Click);
+            // 
             // ucColorMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -62,14 +75,20 @@ namespace dynamic_Layout
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "ucColorMenu";
             this.Size = new System.Drawing.Size(128, 460);
+            this.Load += new System.EventHandler(this.ucColorMenu_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
+
+
+
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pColor;
+        private System.Windows.Forms.ColorDialog cDialogColor;
     }
 }

@@ -29,22 +29,22 @@ namespace dynamic_Layout
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.pColor = new System.Windows.Forms.Panel();
             this.cDialogColor = new System.Windows.Forms.ColorDialog();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flpMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // flpMenu
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Controls.Add(this.pColor);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(128, 460);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.flpMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.flpMenu.Controls.Add(this.label1);
+            this.flpMenu.Controls.Add(this.pColor);
+            this.flpMenu.Location = new System.Drawing.Point(0, 0);
+            this.flpMenu.Name = "flpMenu";
+            this.flpMenu.Size = new System.Drawing.Size(128, 460);
+            this.flpMenu.TabIndex = 0;
             // 
             // label1
             // 
@@ -72,11 +72,11 @@ namespace dynamic_Layout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flpMenu);
             this.Name = "ucColorMenu";
             this.Size = new System.Drawing.Size(128, 460);
             this.Load += new System.EventHandler(this.ucColorMenu_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flpMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -86,7 +86,7 @@ namespace dynamic_Layout
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpMenu;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pColor;
         private System.Windows.Forms.ColorDialog cDialogColor;

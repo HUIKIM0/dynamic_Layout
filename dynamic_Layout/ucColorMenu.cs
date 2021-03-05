@@ -28,6 +28,8 @@ namespace dynamic_Layout
             InitializeComponent();
         }
 
+
+        // 로드되면 -> 버튼만든다
         private void ucColorMenu_Load(object sender, EventArgs e)
         {
 
@@ -45,9 +47,10 @@ namespace dynamic_Layout
                 flpMenu.Controls.Add(btn);
             }
 
-
-
         }
+
+
+
 
         private void Btn_Click(object sender, EventArgs e)
         {
@@ -64,5 +67,61 @@ namespace dynamic_Layout
                 pColor.BackColor = cDialogColor.Color;
             }
         }
+
+
+        //판넬을 더블클릭 -> 해당 판넬의 색상과 같은 색이 버튼에 입혀지게
+        //그래서 판넬에 따른 버튼을 따는거임
+        public string fButtonColorChange(ucPanel oPanel)
+        {
+
+            string strResult = string.Empty;
+            string strbtnName = string.Empty;
+
+            switch (oPanel.Name)
+            {
+                case "ucPanel1":
+                    strbtnName = "btn1";
+                    break;
+
+                case "ucPanel2":
+                    strbtnName = "btn2";
+                    break;
+
+                case "ucPanel3":
+                    strbtnName = "btn3";
+                    break;
+
+                case "ucPanel4":
+                    strbtnName = "btn4";
+                    break;
+
+            }
+            strResult = fBtnSearch(strbtnName, oPanel.BackColor, oPanel.Name);
+            return strResult;
+        }
+
+
+        //FlowLayoutPanel에서 원하는 컨트롤(버튼) 찾아오는 함수
+        private string fBtnSearch(string strbtnName, Color oColor, string strPanelName)
+        {
+            string strResult = string.Empty;
+
+            foreach (var oitem in flpMenu.Controls)  //ucColorMenu.cs의 flpMenu에 담긴 컨트롤들
+            {
+                if(oitem is Button)
+                {
+                    Button obtn = oitem as Button;
+
+                    if (obtn.Name.Equals(strbtnName))
+                    {
+                        obtn.BackColor = oColor;
+                        strResult = string.Format("{0} Panel DoubleClick, {1}의 색상을 {2}로 Panel 색상과 같게 변경", strPanelName, strbtnName, oColor.ToString());
+                        return strResult;
+                    }
+                }
+            }
+            return null;
+        }
+
     }
 }

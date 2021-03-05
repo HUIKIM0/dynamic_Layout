@@ -13,7 +13,6 @@ namespace dynamic_Layout
     public partial class Form1 : Form
     {
 
-        // ucPanel2.BackColor = default(Color);  -> 색상 원래대로 돌려놓기
 
         public Form1()
         {
@@ -24,6 +23,21 @@ namespace dynamic_Layout
         {
             //3. ucClorMenu.cs의 이벤트 등록. Button이랑 pColor 받음
             ucFormColorMenu.eColorSender += UcFormColorMenu_eColorSender;
+
+
+            // Form1.cs에 있는 판넬 더블클릭 시 이벤트 일어나야함. 등록
+            ucPanel1.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler;
+            ucPanel2.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler;
+            ucPanel3.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler;
+            ucPanel4.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler;
+        }
+
+
+
+        private void UcPanel_eLableDoubleClickHandler(object sender, EventArgs e)
+        {
+            string strResult = ucFormColorMenu.fButtonColorChange((ucPanel)sender);
+            lboxLog.Items.Add(strResult);
         }
 
         private void UcFormColorMenu_eColorSender(Button arg1, Color arg2)
@@ -58,5 +72,6 @@ namespace dynamic_Layout
             string strResult = string.Format("선택: {0}, {1}의 색상을 {2} 로 변경 완료!",arg1.Name,strPanelName,arg2.ToString());
             lboxLog.Items.Add(strResult);
         }
+
     }
 }

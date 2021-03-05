@@ -60,8 +60,8 @@ namespace dynamic_Layout
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
-            this.splitContainer1.Size = new System.Drawing.Size(692, 460);
-            this.splitContainer1.SplitterDistance = 125;
+            this.splitContainer1.Size = new System.Drawing.Size(871, 460);
+            this.splitContainer1.SplitterDistance = 128;
             this.splitContainer1.TabIndex = 0;
             // 
             // ucFormColorMenu
@@ -69,7 +69,7 @@ namespace dynamic_Layout
             this.ucFormColorMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucFormColorMenu.Location = new System.Drawing.Point(0, 0);
             this.ucFormColorMenu.Name = "ucFormColorMenu";
-            this.ucFormColorMenu.Size = new System.Drawing.Size(125, 460);
+            this.ucFormColorMenu.Size = new System.Drawing.Size(128, 460);
             this.ucFormColorMenu.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -88,7 +88,7 @@ namespace dynamic_Layout
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.05821F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.94366F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99812F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(563, 460);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(739, 460);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -107,7 +107,7 @@ namespace dynamic_Layout
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(563, 243);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(739, 243);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // ucPanel2
@@ -117,7 +117,7 @@ namespace dynamic_Layout
             this.ucPanel2.Location = new System.Drawing.Point(0, 0);
             this.ucPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.ucPanel2.Name = "ucPanel2";
-            this.ucPanel2.Size = new System.Drawing.Size(281, 121);
+            this.ucPanel2.Size = new System.Drawing.Size(369, 121);
             this.ucPanel2.TabIndex = 0;
             // 
             // ucPanel3
@@ -127,17 +127,17 @@ namespace dynamic_Layout
             this.ucPanel3.Location = new System.Drawing.Point(0, 121);
             this.ucPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.ucPanel3.Name = "ucPanel3";
-            this.ucPanel3.Size = new System.Drawing.Size(281, 122);
+            this.ucPanel3.Size = new System.Drawing.Size(369, 122);
             this.ucPanel3.TabIndex = 1;
             // 
             // ucPanel4
             // 
             this.ucPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucPanel4.Location = new System.Drawing.Point(281, 0);
+            this.ucPanel4.Location = new System.Drawing.Point(369, 0);
             this.ucPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.ucPanel4.Name = "ucPanel4";
             this.tableLayoutPanel2.SetRowSpan(this.ucPanel4, 2);
-            this.ucPanel4.Size = new System.Drawing.Size(282, 243);
+            this.ucPanel4.Size = new System.Drawing.Size(370, 243);
             this.ucPanel4.TabIndex = 2;
             // 
             // ucPanel1
@@ -147,7 +147,7 @@ namespace dynamic_Layout
             this.ucPanel1.Location = new System.Drawing.Point(0, 0);
             this.ucPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.ucPanel1.Name = "ucPanel1";
-            this.ucPanel1.Size = new System.Drawing.Size(563, 101);
+            this.ucPanel1.Size = new System.Drawing.Size(739, 101);
             this.ucPanel1.TabIndex = 1;
             // 
             // lboxLog
@@ -156,16 +156,17 @@ namespace dynamic_Layout
             this.lboxLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lboxLog.FormattingEnabled = true;
             this.lboxLog.ItemHeight = 15;
-            this.lboxLog.Location = new System.Drawing.Point(3, 347);
+            this.lboxLog.Location = new System.Drawing.Point(0, 344);
+            this.lboxLog.Margin = new System.Windows.Forms.Padding(0);
             this.lboxLog.Name = "lboxLog";
-            this.lboxLog.Size = new System.Drawing.Size(557, 110);
+            this.lboxLog.Size = new System.Drawing.Size(739, 116);
             this.lboxLog.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 460);
+            this.ClientSize = new System.Drawing.Size(871, 460);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "Form1";

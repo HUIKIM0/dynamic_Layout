@@ -12,6 +12,9 @@ namespace dynamic_Layout
 {
     public partial class ucPanel : UserControl
     {
+        public event EventHandler eLableDoubleClickHandler;
+
+
         public ucPanel()
         {
             InitializeComponent();
@@ -21,6 +24,15 @@ namespace dynamic_Layout
         private void PanelSizeChanged(object sender, EventArgs e)
         {
             lblPanel.Text = string.Format("({0},{1})",lblPanel.Width,lblPanel.Height);
+        }
+
+
+        // 더블클릭하면 이벤트
+        private void lblPanel_DoubleClick(object sender, EventArgs e)
+        {
+            
+            eLableDoubleClickHandler(this, e);
+
         }
     }
 }

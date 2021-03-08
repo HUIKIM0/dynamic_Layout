@@ -38,6 +38,7 @@ namespace dynamic_Layout
             this.ucPanel4 = new dynamic_Layout.ucPanel();
             this.ucPanel1 = new dynamic_Layout.ucPanel();
             this.lboxLog = new System.Windows.Forms.ListBox();
+            this.btnPanelRe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -55,21 +56,23 @@ namespace dynamic_Layout
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.splitContainer1.Panel1.Controls.Add(this.btnPanelRe);
             this.splitContainer1.Panel1.Controls.Add(this.ucFormColorMenu);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainer1.Size = new System.Drawing.Size(871, 460);
-            this.splitContainer1.SplitterDistance = 128;
+            this.splitContainer1.SplitterDistance = 129;
             this.splitContainer1.TabIndex = 0;
             // 
             // ucFormColorMenu
             // 
+            this.ucFormColorMenu.BackColor = System.Drawing.SystemColors.Control;
             this.ucFormColorMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucFormColorMenu.Location = new System.Drawing.Point(0, 0);
             this.ucFormColorMenu.Name = "ucFormColorMenu";
-            this.ucFormColorMenu.Size = new System.Drawing.Size(128, 460);
+            this.ucFormColorMenu.Size = new System.Drawing.Size(129, 460);
             this.ucFormColorMenu.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -88,12 +91,12 @@ namespace dynamic_Layout
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.05821F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.94366F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.99812F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(739, 460);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(738, 460);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.PaleGreen;
+            this.tableLayoutPanel2.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -107,7 +110,7 @@ namespace dynamic_Layout
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(739, 243);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(738, 243);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // ucPanel2
@@ -122,7 +125,7 @@ namespace dynamic_Layout
             // 
             // ucPanel3
             // 
-            this.ucPanel3.BackColor = System.Drawing.Color.Moccasin;
+            this.ucPanel3.BackColor = System.Drawing.Color.PaleVioletRed;
             this.ucPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucPanel3.Location = new System.Drawing.Point(0, 121);
             this.ucPanel3.Margin = new System.Windows.Forms.Padding(0);
@@ -132,22 +135,23 @@ namespace dynamic_Layout
             // 
             // ucPanel4
             // 
+            this.ucPanel4.BackColor = System.Drawing.Color.PaleGreen;
             this.ucPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucPanel4.Location = new System.Drawing.Point(369, 0);
             this.ucPanel4.Margin = new System.Windows.Forms.Padding(0);
             this.ucPanel4.Name = "ucPanel4";
             this.tableLayoutPanel2.SetRowSpan(this.ucPanel4, 2);
-            this.ucPanel4.Size = new System.Drawing.Size(370, 243);
+            this.ucPanel4.Size = new System.Drawing.Size(369, 243);
             this.ucPanel4.TabIndex = 2;
             // 
             // ucPanel1
             // 
-            this.ucPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ucPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ucPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ucPanel1.Location = new System.Drawing.Point(0, 0);
             this.ucPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.ucPanel1.Name = "ucPanel1";
-            this.ucPanel1.Size = new System.Drawing.Size(739, 101);
+            this.ucPanel1.Size = new System.Drawing.Size(738, 101);
             this.ucPanel1.TabIndex = 1;
             // 
             // lboxLog
@@ -159,8 +163,19 @@ namespace dynamic_Layout
             this.lboxLog.Location = new System.Drawing.Point(0, 344);
             this.lboxLog.Margin = new System.Windows.Forms.Padding(0);
             this.lboxLog.Name = "lboxLog";
-            this.lboxLog.Size = new System.Drawing.Size(739, 116);
+            this.lboxLog.Size = new System.Drawing.Size(738, 116);
             this.lboxLog.TabIndex = 2;
+            // 
+            // btnPanelRe
+            // 
+            this.btnPanelRe.BackColor = System.Drawing.Color.Gray;
+            this.btnPanelRe.Location = new System.Drawing.Point(8, 344);
+            this.btnPanelRe.Name = "btnPanelRe";
+            this.btnPanelRe.Size = new System.Drawing.Size(112, 32);
+            this.btnPanelRe.TabIndex = 1;
+            this.btnPanelRe.Text = "초기화";
+            this.btnPanelRe.UseVisualStyleBackColor = false;
+            this.btnPanelRe.Click += new System.EventHandler(this.btnPanelRe_Click);
             // 
             // Form1
             // 
@@ -192,6 +207,7 @@ namespace dynamic_Layout
         private ucPanel ucPanel4;
         private ucColorMenu ucFormColorMenu;
         private System.Windows.Forms.ListBox lboxLog;
+        private System.Windows.Forms.Button btnPanelRe;
     }
 }
 

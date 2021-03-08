@@ -73,5 +73,24 @@ namespace dynamic_Layout
             lboxLog.Items.Add(strResult);
         }
 
+
+        // 판넬 색상 초기화기능
+        private void btnPanelRe_Click(object sender, EventArgs e)
+        {
+            string strResult = string.Empty;
+
+
+            this.ucPanel1.BackColor = Color.FromArgb(192, 192, 255);
+            this.ucPanel2.BackColor = Color.DarkTurquoise;
+            this.ucPanel3.BackColor = Color.PaleVioletRed;
+            this.ucPanel4.BackColor = Color.PaleGreen;
+
+            string strbtnName = string.Empty;
+
+
+            strResult = string.Format("★색상 초기화 완료★");
+            lboxLog.Items.Add(strResult);
+        }
+
     }
 }

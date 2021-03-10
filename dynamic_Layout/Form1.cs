@@ -88,7 +88,7 @@ namespace dynamic_Layout
             string strbtnName = string.Empty;
 
 
-            strResult = string.Format("★색상 초기화 완료★");
+            strResult = string.Format("★Panel 색상 초기화 완료★");
             lboxLog.Items.Add(strResult);
         }
 

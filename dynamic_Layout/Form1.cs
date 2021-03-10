@@ -21,7 +21,7 @@ namespace dynamic_Layout
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //3. ucClorMenu.cs의 이벤트 등록. Button이랑 pColor 받음
+            //★3. ucClorMenu.cs의 이벤트 등록. Button이랑 pColor(색상선택)
             ucFormColorMenu.eColorSender += UcFormColorMenu_eColorSender;
 
 
@@ -29,7 +29,7 @@ namespace dynamic_Layout
             ucPanel1.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler;
             ucPanel2.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler;
             ucPanel3.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler;
-            ucPanel4.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler;
+            ucPanel4.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler; 
         }
 
 
@@ -74,7 +74,7 @@ namespace dynamic_Layout
         }
 
 
-        // 판넬 색상 초기화기능
+        // 판넬 색상 초기화기능(테스트용...ㅎ)
         private void btnPanelRe_Click(object sender, EventArgs e)
         {
             string strResult = string.Empty;

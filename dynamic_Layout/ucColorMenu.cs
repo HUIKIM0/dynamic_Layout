@@ -13,7 +13,7 @@ namespace dynamic_Layout
     public partial class ucColorMenu : UserControl
     {
 
-        //1. delegate event 선언
+        //★1. delegate event 선언
         public delegate void delColorSender(Button dSender, Color dColor);
         public event delColorSender eColorSender;
 
@@ -51,12 +51,12 @@ namespace dynamic_Layout
 
 
 
-
         private void Btn_Click(object sender, EventArgs e)
         {
-            //2. delegate event 값 넘기기. 아애 버튼만 쓸거니까 (Button)sender 해줘도 무방
+            //★2. delegate event 값 넘기기. 아애 버튼만 쓸거니까 (Button)sender 해줘도 무방
             eColorSender((Button)sender, pColor.BackColor);
         }
+
 
         private void pColor_Click(object sender, EventArgs e)
         {
@@ -70,7 +70,7 @@ namespace dynamic_Layout
 
 
         //판넬을 더블클릭 -> 해당 판넬의 색상과 같은 색이 버튼에 입혀지게
-        //그래서 판넬에 따른 버튼을 따는거임
+        //그래서 판낼에 따른 버튼을 매칭
         public string fButtonColorChange(ucPanel oPanel)
         {
 
@@ -101,7 +101,7 @@ namespace dynamic_Layout
         }
 
 
-        //FlowLayoutPanel에서 원하는 컨트롤(버튼) 찾아오는 함수
+        //FlowLayoutPanel에서 원하는 컨트롤(버튼) 찾아오는 함수.
         private string fBtnSearch(string strbtnName, Color oColor, string strPanelName)
         {
             string strResult = string.Empty;

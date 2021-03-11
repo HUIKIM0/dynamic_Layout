@@ -69,8 +69,8 @@ namespace dynamic_Layout
         }
 
 
-        //판넬을 더블클릭 -> 해당 판넬의 색상과 같은 색이 버튼에 입혀지게
-        //그래서 판낼에 따른 버튼을 매칭
+        //판넬을 더블클릭 -> 해당 판넬의 색상과 같은 색이 버튼에 입혀지게 써먹을거임
+        //그래서 판낼에 따른 버튼을 매칭. main form에서 panel값 넘겨받으면 매칭하고 색상바꾸고~!
         public string fButtonColorChange(ucPanel oPanel)
         {
 
@@ -101,7 +101,7 @@ namespace dynamic_Layout
         }
 
 
-        //FlowLayoutPanel에서 원하는 컨트롤(버튼) 찾아오는 함수.
+        //FlowLayoutPanel에서 ★원하는 컨트롤(버튼) 찾아오는 함수★
         private string fBtnSearch(string strbtnName, Color oColor, string strPanelName)
         {
             string strResult = string.Empty;

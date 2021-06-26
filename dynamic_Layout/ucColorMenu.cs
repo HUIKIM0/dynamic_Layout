@@ -33,18 +33,35 @@ namespace dynamic_Layout
         private void ucColorMenu_Load(object sender, EventArgs e)
         {
 
-            for (int i = 1; i < 5; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 Button btn = new Button();
 
-                btn.Name = "btn" + i;
-                btn.Text = string.Format("P{0} 색상변경", i);
-                btn.BackColor = Color.Gray;
-                btn.Margin = new Padding(5, 20, 0, 0);
-                btn.Size = new Size(100, 30);
-                btn.Click += Btn_Click;
+                if(i <= 4)
+                {
+                    btn.Name = "btn" + i;
+                    btn.Text = string.Format("P{0} 색상변경", i);
+                    btn.BackColor = Color.Gray;
+                    btn.Margin = new Padding(5, 20, 0, 0);
+                    btn.Size = new Size(100, 30);
+                    btn.Click += Btn_Click;
+
+                }
+
+
+                else if(i == 5)
+                {
+                    btn.Name = "btn" + i;
+                    btn.Text = string.Format("초기화");
+                    btn.BackColor = Color.Gray;
+                    btn.Margin = new Padding(5, 20, 0, 0);
+                    btn.Size = new Size(100, 30);
+                    btn.Click += Btn_Click;
+                }
 
                 flpMenu.Controls.Add(btn);
+
+
             }
 
         }

@@ -44,53 +44,87 @@ namespace dynamic_Layout
         {
             string strPanelName = string.Empty;
 
+
+
             switch (arg1.Name)
             {
                 case "btn1":
                     ucPanel1.BackColor = arg2;
                     strPanelName = "Panel Top";
+
+                    TextResult();
                     break;
 
                 case "btn2":
                     ucPanel2.BackColor = arg2;
                     strPanelName = "Panel Center1";
+
+                    TextResult();
                     break;
 
                 case "btn3":
                     ucPanel3.BackColor = arg2;
                     strPanelName = "Panel Center2";
+
+                    TextResult();
                     break;
 
                 case "btn4":
                     ucPanel4.BackColor = arg2;
                     strPanelName = "Panel Right";
+
+                    TextResult();
                     break;
+
+
+                case "btn5":
+
+                    this.ucPanel1.BackColor = Color.FromArgb(192, 192, 255);
+                    this.ucPanel2.BackColor = Color.DarkTurquoise;
+                    this.ucPanel3.BackColor = Color.PaleVioletRed;
+                    this.ucPanel4.BackColor = Color.PaleGreen;
+
+                    string Reset = null;
+                    Reset = string.Format("★Panel 초기화 완료★");
+                    lboxLog.Items.Add(Reset);
+
+                    break;
+
                 default:
                     break;
 
-            }
-            string strResult = string.Format("선택: {0}, {1}의 색상을 {2} 로 변경 완료!",arg1.Name,strPanelName,arg2.ToString());
-            lboxLog.Items.Add(strResult);
+                void TextResult()
+                {
+                    string strResult = null;
+
+                    strResult = string.Format("선택: {0}, {1}의 색상을 {2} 로 변경 완료!", arg1.Name, strPanelName, arg2.ToString());
+                    lboxLog.Items.Add(strResult);
+                }
+
+            }             
+
         }
 
 
-        // 판넬 색상 초기화기능(테스트용...ㅎ)
-        private void btnPanelRe_Click(object sender, EventArgs e)
-        {
-            string strResult = string.Empty;
 
 
-            this.ucPanel1.BackColor = Color.FromArgb(192, 192, 255);
-            this.ucPanel2.BackColor = Color.DarkTurquoise;
-            this.ucPanel3.BackColor = Color.PaleVioletRed;
-            this.ucPanel4.BackColor = Color.PaleGreen;
-
-            string strbtnName = string.Empty;
+        // 판넬 색상 초기화기능(...ㅎ)
+        //private void btnPanelRe_Click(object sender, EventArgs e)
+        //{
+        //    string strResult = string.Empty;
 
 
-            strResult = string.Format("★Panel 색상 초기화 완료★");
-            lboxLog.Items.Add(strResult);
-        }
+        //    this.ucPanel1.BackColor = Color.FromArgb(192, 192, 255);
+        //    this.ucPanel2.BackColor = Color.DarkTurquoise;
+        //    this.ucPanel3.BackColor = Color.PaleVioletRed;
+        //    this.ucPanel4.BackColor = Color.PaleGreen;
+
+        //    string strbtnName = string.Empty;
+
+
+        //    strResult = string.Format("★Panel 색상 초기화 완료★");
+        //    lboxLog.Items.Add(strResult);
+        //}
 
     }
 }

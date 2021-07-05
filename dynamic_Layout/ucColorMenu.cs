@@ -67,14 +67,6 @@ namespace dynamic_Layout
         }
 
 
-
-        private void Btn_Click(object sender, EventArgs e)
-        {
-            //★2. delegate event 값 넘기기. 아애 버튼만 쓸거니까 (Button)sender 해줘도 무방
-            eColorSender((Button)sender, pColor.BackColor);
-        }
-
-
         private void pColor_Click(object sender, EventArgs e)
         {
             DialogResult dRet = cDialogColor.ShowDialog();    //ColorDialog 불러서 선택한 뒤 결과값까지 받아옴
@@ -84,6 +76,14 @@ namespace dynamic_Layout
                 pColor.BackColor = cDialogColor.Color;
             }
         }
+
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            //★2. delegate event 값 넘기기. 아애 버튼만 쓸거니까 (Button)sender 해줘도 무방
+            eColorSender((Button)sender, pColor.BackColor);
+        }
+
 
 
         //판넬을 더블클릭 -> 해당 판넬의 색상과 같은 색이 버튼에 입혀지게 써먹을거임
@@ -119,6 +119,7 @@ namespace dynamic_Layout
 
 
         //FlowLayoutPanel에서 ★원하는 컨트롤(버튼) 찾아오는 함수★
+        // string strbtnName (판낼과 버튼 매칭한거) /  Color oColor(판낼 색상) / string strPanelName (판낼 이름)
         private string fBtnSearch(string strbtnName, Color oColor, string strPanelName)
         {
             string strResult = string.Empty;
@@ -129,7 +130,7 @@ namespace dynamic_Layout
                 {
                     Button obtn = oitem as Button;
 
-                    if (obtn.Name.Equals(strbtnName))
+                    if (obtn.Name.Equals(strbtnName)) 
                     {
                         obtn.BackColor = oColor;
                         strResult = string.Format("{0} Panel DoubleClick, {1}의 색상을 {2}로 Panel 색상과 같게 변경", strPanelName, strbtnName, oColor.ToString());

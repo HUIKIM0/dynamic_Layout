@@ -34,12 +34,6 @@ namespace dynamic_Layout
 
 
 
-        private void UcPanel_eLableDoubleClickHandler(object sender, EventArgs e)
-        {
-            string strResult = ucFormColorMenu.fButtonColorChange((ucPanel)sender);
-            lboxLog.Items.Add(strResult);
-        }
-
         private void UcFormColorMenu_eColorSender(Button arg1, Color arg2)
         {
             string strPanelName = string.Empty;
@@ -106,6 +100,11 @@ namespace dynamic_Layout
         }
 
 
+        private void UcPanel_eLableDoubleClickHandler(object sender, EventArgs e)
+        {
+            string strResult = ucFormColorMenu.fButtonColorChange((ucPanel)sender);
+            lboxLog.Items.Add(strResult);
+        }
 
 
         // 판넬 색상 초기화기능(...ㅎ)

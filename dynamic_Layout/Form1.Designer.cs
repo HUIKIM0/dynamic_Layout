@@ -30,14 +30,14 @@ namespace dynamic_Layout
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.ucFormColorMenu = new dynamic_Layout.ucColorMenu();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lboxLog = new System.Windows.Forms.ListBox();
-            this.ucFormColorMenu = new dynamic_Layout.ucColorMenu();
             this.ucPanel2 = new dynamic_Layout.ucPanel();
             this.ucPanel3 = new dynamic_Layout.ucPanel();
             this.ucPanel4 = new dynamic_Layout.ucPanel();
             this.ucPanel1 = new dynamic_Layout.ucPanel();
+            this.lboxLog = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -48,6 +48,7 @@ namespace dynamic_Layout
             // 
             // splitContainer1
             // 
+            this.splitContainer1.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
@@ -63,6 +64,15 @@ namespace dynamic_Layout
             this.splitContainer1.Size = new System.Drawing.Size(871, 460);
             this.splitContainer1.SplitterDistance = 129;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // ucFormColorMenu
+            // 
+            this.ucFormColorMenu.BackColor = System.Drawing.SystemColors.Control;
+            this.ucFormColorMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucFormColorMenu.Location = new System.Drawing.Point(0, 0);
+            this.ucFormColorMenu.Name = "ucFormColorMenu";
+            this.ucFormColorMenu.Size = new System.Drawing.Size(129, 460);
+            this.ucFormColorMenu.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -101,27 +111,6 @@ namespace dynamic_Layout
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(738, 243);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // lboxLog
-            // 
-            this.lboxLog.BackColor = System.Drawing.SystemColors.Menu;
-            this.lboxLog.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lboxLog.FormattingEnabled = true;
-            this.lboxLog.ItemHeight = 15;
-            this.lboxLog.Location = new System.Drawing.Point(0, 344);
-            this.lboxLog.Margin = new System.Windows.Forms.Padding(0);
-            this.lboxLog.Name = "lboxLog";
-            this.lboxLog.Size = new System.Drawing.Size(738, 116);
-            this.lboxLog.TabIndex = 2;
-            // 
-            // ucFormColorMenu
-            // 
-            this.ucFormColorMenu.BackColor = System.Drawing.SystemColors.Control;
-            this.ucFormColorMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucFormColorMenu.Location = new System.Drawing.Point(0, 0);
-            this.ucFormColorMenu.Name = "ucFormColorMenu";
-            this.ucFormColorMenu.Size = new System.Drawing.Size(129, 460);
-            this.ucFormColorMenu.TabIndex = 0;
             // 
             // ucPanel2
             // 
@@ -163,6 +152,18 @@ namespace dynamic_Layout
             this.ucPanel1.Name = "ucPanel1";
             this.ucPanel1.Size = new System.Drawing.Size(738, 101);
             this.ucPanel1.TabIndex = 1;
+            // 
+            // lboxLog
+            // 
+            this.lboxLog.BackColor = System.Drawing.SystemColors.Menu;
+            this.lboxLog.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lboxLog.FormattingEnabled = true;
+            this.lboxLog.ItemHeight = 15;
+            this.lboxLog.Location = new System.Drawing.Point(0, 344);
+            this.lboxLog.Margin = new System.Windows.Forms.Padding(0);
+            this.lboxLog.Name = "lboxLog";
+            this.lboxLog.Size = new System.Drawing.Size(738, 116);
+            this.lboxLog.TabIndex = 2;
             // 
             // Form1
             // 

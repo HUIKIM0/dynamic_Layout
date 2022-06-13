@@ -33,55 +33,43 @@ namespace dynamic_Layout
         }
 
 
-
-        private void UcFormColorMenu_eColorSender(Button arg1, Color arg2)
+        
+        private void UcFormColorMenu_eColorSender(Button btn, Color color, List<Button> listbutton)
         {
             string strPanelName = string.Empty;
 
-
-
-            switch (arg1.Name)
+             switch (btn.Name)
             {
                 case "btn1":
-                    ucPanel1.BackColor = arg2;
+                    ucPanel1.BackColor = color;
                     strPanelName = "Panel Top";
-
                     TextResult();
                     break;
 
                 case "btn2":
-                    ucPanel2.BackColor = arg2;
+                    ucPanel2.BackColor = color;
                     strPanelName = "Panel Center1";
-
                     TextResult();
                     break;
 
                 case "btn3":
-                    ucPanel3.BackColor = arg2;
+                    ucPanel3.BackColor = color;
                     strPanelName = "Panel Center2";
-
                     TextResult();
                     break;
 
                 case "btn4":
-                    ucPanel4.BackColor = arg2;
+                    ucPanel4.BackColor = color;
                     strPanelName = "Panel Right";
-
                     TextResult();
                     break;
 
 
                 case "btn5":
+                    btnPanelRe_Click(listbutton);
 
-                    this.ucPanel1.BackColor = Color.FromArgb(192, 192, 255);
-                    this.ucPanel2.BackColor = Color.DarkTurquoise;
-                    this.ucPanel3.BackColor = Color.PaleVioletRed;
-                    this.ucPanel4.BackColor = Color.PaleGreen;
-
-                    string Reset = null;
-                    Reset = string.Format("★Panel 초기화 완료★");
-                    lboxLog.Items.Add(Reset);
-
+                    string strReset = string.Format("★초기화 완료★");
+                    lboxLog.Items.Add(strReset);
                     break;
 
                 default:
@@ -91,39 +79,39 @@ namespace dynamic_Layout
                 {
                     string strResult = null;
 
-                    strResult = string.Format("선택: {0}, {1}의 색상을 {2} 로 변경 완료!", arg1.Name, strPanelName, arg2.ToString());
+                    strResult = string.Format("선택: {0}, {1}의 색상을 {2} 로 변경 완료!", btn.Name, strPanelName, color.ToString());
                     lboxLog.Items.Add(strResult);
                 }
-
             }             
-
         }
-
 
         private void UcPanel_eLableDoubleClickHandler(object sender, EventArgs e)
         {
-            string strResult = ucFormColorMenu.fButtonColorChange((ucPanel)sender);
+            string strResult = ucFormColorMenu.fButtonColorChange((ucPanel)sender);   //ucPanel이라고 꼭!
             lboxLog.Items.Add(strResult);
+
         }
 
 
-        // 판넬 색상 초기화기능(...ㅎ)
-        //private void btnPanelRe_Click(object sender, EventArgs e)
-        //{
-        //    string strResult = string.Empty;
+        //판낼,버튼 초기화 Function
+        private void btnPanelRe_Click(List<Button> btn)
+        { 
 
+            ucPanel1.BackColor = Color.FromArgb(192, 192, 255);
+            ucPanel2.BackColor = Color.DarkTurquoise;
+            ucPanel3.BackColor = Color.PaleVioletRed;
+            ucPanel4.BackColor = Color.PaleGreen;
 
-        //    this.ucPanel1.BackColor = Color.FromArgb(192, 192, 255);
-        //    this.ucPanel2.BackColor = Color.DarkTurquoise;
-        //    this.ucPanel3.BackColor = Color.PaleVioletRed;
-        //    this.ucPanel4.BackColor = Color.PaleGreen;
+            int ListCount = btn.Count;
 
-        //    string strbtnName = string.Empty;
+            for (int i = 0; i < ListCount; i++)
+            {
+                if (btn[i] is Button)
+                {
+                    btn[i].BackColor = Color.Gray;
+                }
+            }
 
-
-        //    strResult = string.Format("★Panel 색상 초기화 완료★");
-        //    lboxLog.Items.Add(strResult);
-        //}
-
+        }
     }
 }

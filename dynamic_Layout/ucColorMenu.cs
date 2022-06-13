@@ -14,7 +14,7 @@ namespace dynamic_Layout
     {
 
         //★1. delegate event 선언
-        public delegate void delColorSender(Button dSender, Color dColor);
+        public delegate void delColorSender(Button dSender, Color dColor, List<Button> listBtn);
         public event delColorSender eColorSender;
 
         // 1-2 기본 EventHandler 버전
@@ -22,6 +22,9 @@ namespace dynamic_Layout
 
         // 1-3 제네릭 형태의 delgate 버전
         //public event Action<Button,Color> eColorAction;
+
+
+        List<Button> _btnlist = new List<Button>();  //초기화 작업 위해 btn1~4 넣을 List
 
         public ucColorMenu()
         {
@@ -44,10 +47,10 @@ namespace dynamic_Layout
                     btn.BackColor = Color.Gray;
                     btn.Margin = new Padding(5, 20, 0, 0);
                     btn.Size = new Size(100, 30);
+                    _btnlist.Add(btn);
                     btn.Click += Btn_Click;
 
                 }
-
 
                 else if(i == 5)
                 {
@@ -57,41 +60,38 @@ namespace dynamic_Layout
                     btn.Margin = new Padding(5, 20, 0, 0);
                     btn.Size = new Size(100, 30);
                     btn.Click += Btn_Click;
+                   
                 }
 
                 flpMenu.Controls.Add(btn);
-
-
             }
-
         }
 
-
+        //ColorDialog
         private void pColor_Click(object sender, EventArgs e)
         {
-            DialogResult dRet = cDialogColor.ShowDialog();    //ColorDialog 불러서 선택한 뒤 결과값까지 받아옴
+            DialogResult dRet = cDialogColor.ShowDialog();   
 
-            if (dRet == DialogResult.OK)   //정상일때 선택 된 Color를 Panel에 뿌려줌 
+            if (dRet == DialogResult.OK)  
             {
                 pColor.BackColor = cDialogColor.Color;
             }
         }
 
 
+        //★2. delegate event 값 넘기기.
         private void Btn_Click(object sender, EventArgs e)
         {
-            //★2. delegate event 값 넘기기. 아애 버튼만 쓸거니까 (Button)sender 해줘도 무방
-            eColorSender((Button)sender, pColor.BackColor);
+            eColorSender((Button)sender, pColor.BackColor, _btnlist);
         }
 
 
 
-        //판넬을 더블클릭 -> 해당 판넬의 색상과 같은 색이 버튼에 입혀지게 써먹을거임
-        //그래서 판낼에 따른 버튼을 매칭. main form에서 panel값 넘겨받으면 매칭하고 색상바꾸고~!
-        //여기서 함수를 만들어 준 이유는 이 파일에 버튼,색상정보 다 있음 Main에서 함수호출로 Panel만 받아오면 되므로 쉬워서
-        public string fButtonColorChange(ucPanel oPanel)
+        //판넬을 더블클릭 -> 판넬 색상 == 버튼 색상 되길 원함
+        //그래서 판넬에 따른 버튼을 매칭. main form에서 panel값 넘겨받으면 매칭
+        //여기서 함수를 만들어 준 이유는 이 파일에 버튼,색상정보 다 있음 Main에서 함수호출로 Panel만 받아오면 되므로 쉬움
+        public string fButtonColorChange(ucPanel oPanel)   
         {
-
             string strResult = string.Empty;
             string strbtnName = string.Empty;
 
@@ -114,15 +114,14 @@ namespace dynamic_Layout
                     break;
 
             }
-            //버튼과 판낼 매칭한거 , 전달받은 판낼의 색상정보, 전달받은 판낼의 이름
-            strResult = fBtnSearch(strbtnName, oPanel.BackColor, oPanel.Name);  
+
+            strResult = fBtnSearch(strbtnName, oPanel.Name, oPanel.BackColor);  
             return strResult;
         }
 
 
         //FlowLayoutPanel에서 ★원하는 컨트롤(버튼) 찾아오는 함수★
-   
-        private string fBtnSearch(string strbtnName, Color oColor, string strPanelName)
+        private string fBtnSearch(string strbtnName, string strPanelName, Color oColor)
         {
             string strResult = string.Empty;
 
@@ -140,7 +139,6 @@ namespace dynamic_Layout
                     }
                 }
             }
-
             return null;   //컨트롤러가 제대로 없으면 null반환(없으니까)
         }
 

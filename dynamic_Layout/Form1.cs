@@ -29,11 +29,12 @@ namespace dynamic_Layout
             ucPanel1.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler;
             ucPanel2.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler;
             ucPanel3.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler;
-            ucPanel4.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler; 
+            ucPanel4.eLableDoubleClickHandler += UcPanel_eLableDoubleClickHandler;
+
         }
 
 
-        
+
         private void UcFormColorMenu_eColorSender(Button btn, Color color, List<Button> listbutton)
         {
             string strPanelName = string.Empty;
@@ -66,7 +67,7 @@ namespace dynamic_Layout
 
 
                 case "btn5":
-                    btnPanelRe_Click(listbutton);
+                    fbtnPanelRe_Click(listbutton);
 
                     string strReset = string.Format("★초기화 완료★");
                     lboxLog.Items.Add(strReset);
@@ -87,6 +88,7 @@ namespace dynamic_Layout
 
         private void UcPanel_eLableDoubleClickHandler(object sender, EventArgs e)
         {
+            //ucFormColorMenu.fButtonColorChange((ucPanel)sender);
             string strResult = ucFormColorMenu.fButtonColorChange((ucPanel)sender);   //ucPanel이라고 꼭!
             lboxLog.Items.Add(strResult);
 
@@ -94,7 +96,7 @@ namespace dynamic_Layout
 
 
         //판낼,버튼 초기화 Function
-        private void btnPanelRe_Click(List<Button> btn)
+        private void fbtnPanelRe_Click(List<Button> btn)
         { 
 
             ucPanel1.BackColor = Color.FromArgb(192, 192, 255);

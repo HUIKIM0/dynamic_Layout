@@ -31,6 +31,7 @@ namespace dynamic_Layout
             InitializeComponent();
         }
 
+        //Button btn;
 
         // 로드되면 -> 버튼만든다
         private void ucColorMenu_Load(object sender, EventArgs e)
@@ -38,9 +39,11 @@ namespace dynamic_Layout
 
             for (int i = 1; i <= 5; i++)
             {
-                Button btn = new Button();
+                Button btn = new Button();   //for 돌때마다 매번 new 해줘서 new Button 으로 작업~ for 안에 있어야함
 
-                if(i <= 4)
+                //btn = new Button();
+
+                if (i <= 4)
                 {
                     btn.Name = "btn" + i;
                     btn.Text = string.Format("P{0} 색상변경", i);
@@ -59,6 +62,7 @@ namespace dynamic_Layout
                     btn.BackColor = Color.Gray;
                     btn.Margin = new Padding(5, 20, 0, 0);
                     btn.Size = new Size(100, 30);
+                    _btnlist.Add(btn);
                     btn.Click += Btn_Click;
                    
                 }
@@ -87,13 +91,12 @@ namespace dynamic_Layout
 
 
 
-        //판넬을 더블클릭 -> 판넬 색상 == 버튼 색상 되길 원함
-        //그래서 판넬에 따른 버튼을 매칭. main form에서 panel값 넘겨받으면 매칭
-        //여기서 함수를 만들어 준 이유는 이 파일에 버튼,색상정보 다 있음 Main에서 함수호출로 Panel만 받아오면 되므로 쉬움
+        //판넬을 더블클릭 -> 판넬 색상 == 버튼 색상 되게
+        //여기서 함수를 만들어 준 이유는 이 파일에 버튼,색상정보 다 있음 Main에서 함수호출로 Panel만 받아오면 쉽다
         public string fButtonColorChange(ucPanel oPanel)   
         {
             string strResult = string.Empty;
-            string strbtnName = string.Empty;
+            string strbtnName = string.Empty;   // Load시에 이미 btn.Name을 줬으므로 
 
             switch (oPanel.Name)
             {
